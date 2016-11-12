@@ -5,6 +5,7 @@ using System.Collections;
 public class ScoreManager: MonoBehaviour
 {
     public static int score;
+    public int enemyScoreVal;
     Text text;
 
     void Awake()
@@ -19,5 +20,10 @@ public class ScoreManager: MonoBehaviour
     {
         //Show the score value
         text.text = "Score: " + score;
+    }
+
+    void AddScore()
+    {
+        score += enemyScoreVal;
     }
 }
